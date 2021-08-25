@@ -5,7 +5,6 @@ import Input from './components/input/Input';
 function App() {
   return (
     <div className="form">
-      <Gender />
       <Input />
       <div className="text">
         <p>Already have an account? <a href="#"><b>Log In</b></a></p>

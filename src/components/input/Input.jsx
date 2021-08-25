@@ -1,4 +1,5 @@
 import React from 'react';
+import Gender from '../gender/Gender'
 
 class Input extends React.Component {
 
@@ -8,6 +9,7 @@ class Input extends React.Component {
             input: {},
             errors: {},
             touched: {},
+            activeGender: "",
             togglePassword: false
         };
 
@@ -16,6 +18,8 @@ class Input extends React.Component {
         this.handleBlur = this.handleBlur.bind(this);
         this.onToggle = this.onToggle.bind(this);
     }
+
+    activeGender = (gender) => this.setState({activeGender: gender})
 
     onToggle() {
         this.setState({ togglePassword: !this.state.togglePassword })
@@ -38,18 +42,11 @@ class Input extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        const password = document.getElementById("password");
-        const email = document.getElementById("email");
+    
         if (this.validate()) {
             console.log(this.state);
 
-            let input = {};
-            input["email"] = "";
-            input["password"] = "";
-            input["confirm_password"] = "";
-            this.setState({ input: input });
-
-            alert(`Your password:  ${password.value} Your email: ${email.value}`);
+            alert(`Your password:  ${this.state.input.password} Your email: ${this.state.input.email} Your gender: ${this.state.activeGender}`);
         }
     }
 
@@ -108,6 +105,7 @@ class Input extends React.Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
+                <Gender genders={["Male", "Female","Trans"]} callback={this.activeGender} />
 
                     <div class="form-group">
                         <label for="email" id="email">E-mail</label>
