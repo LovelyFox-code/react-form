@@ -1,38 +1,111 @@
-.App {
+.form {
+  width: 35%;
+  margin: auto;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgba(91, 91, 91, 1);
+  padding-bottom: 5%;
+}
+.form-name {
   text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+form {
+  padding-top: 5%;
+}
+.text p {
+  text-align: center;
+  font-size: 15px;
+  font-weight: normal;
+  margin-top: 5%;
+  margin-bottom: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+a {color: rgba(60, 156, 65, 1)}
+a:hover {color: rgba(77, 178, 82, 1)}
+a:active {color: rgba(77, 178, 82, 1)}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btn-group {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.logo-icon {
+  width: 15%;
+  margin-top: 20%;
+  margin-left: 42%;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.btn-gender,
+.btn-gender-active{
+  border: 2px solid rgba(193, 193, 193, 1);
+  background-color: white;
+  color: rgba(91, 91, 91, 1);
+  padding: 14px 28px;
+  padding-bottom: 0;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 30%;
+}
+.btn-gender-active,
+.btn-gender:hover {
+  border: 2px solid rgba(60, 156, 65, 1);
+  color: rgba(60, 156, 65, 1);
+}
+
+.btn-sign {
+  border: none;
   color: white;
+  width: 100%;
+  background-color: rgba(60, 156, 65, 1);
+  padding: 14px 28px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.btn-sign:hover {
+  background-color: rgba(77, 178, 82, 1);
 }
 
-.App-link {
-  color: #61dafb;
+input[type="password"]:focus,
+input[type="text"]:focus{
+  border: 1px solid rgba(135, 215, 139, 1);
+  outline: none;
+  box-shadow: none;
+}
+.error{
+  border: 1px solid rgba(135, 215, 139, 1);
+}
+.pass-wrapper {
+  position: relative;
+  display: flex;
+  margin-bottom: 14px;
+}
+i {
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+i:hover {
+  color: rgba(60, 156, 65, 1);
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+button[type="submit"],
+button[type="button"]{outline: none}
+
+.text-danger {
+  font-size: 15px;
+  font-weight: normal;
+}
+.button:active {
+  background-color: rgba(49, 134, 54, 1);
+}
+
+
+@media screen and (max-width: 800px) {
+  .form {
+    width: 90%;
   }
 }
