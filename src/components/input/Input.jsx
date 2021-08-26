@@ -15,20 +15,13 @@ class Input extends React.Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleBlur = this.handleBlur.bind(this);
         this.onToggle = this.onToggle.bind(this);
     }
 
-    activeGender = (gender) => this.setState({activeGender: gender})
+    activeGender = (gender) => this.setState({ activeGender: gender })
 
     onToggle() {
         this.setState({ togglePassword: !this.state.togglePassword })
-    }
-
-    handleBlur(event) {
-        this.setState({
-            touched: { "event": event }
-        });
     }
 
     handleChange(event) {
@@ -42,11 +35,11 @@ class Input extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-    
+
         if (this.validate()) {
             console.log(this.state);
 
-            alert(`Your password:  ${this.state.input.password} Your email: ${this.state.input.email} Your gender: ${this.state.activeGender}`);
+            alert(`Your gender: ${this.state.activeGender} Your password:  ${this.state.input.password} Your email: ${this.state.input.email}`);
         }
     }
 
@@ -105,8 +98,7 @@ class Input extends React.Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                <Gender genders={["Male", "Female","Trans"]} callback={this.activeGender} />
-
+                    <Gender genders={["Male", "Female", "Other"]} callback={this.activeGender} />
                     <div class="form-group">
                         <label for="email" id="email">E-mail</label>
                         <input

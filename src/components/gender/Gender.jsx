@@ -19,7 +19,6 @@ function Gender(props) {
         <Button gender={gender} onClick={() => handleToggle(index, gender)} className={isActive === index ? "btn-gender-active" : "btn-gender " }/>
     ));
     
-    
     return (
         <div>
             <img className="logo-icon" src={Icon} alt="icon" />

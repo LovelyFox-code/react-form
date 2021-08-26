@@ -6,14 +6,14 @@ import { ReactComponent as Trans } from '../gender/assets/images/trans.svg'
 const genders = {
     "Male": Male,
     "Female": Female,
-    "Trans": Trans
+    "Other": Trans
 }
 
 function Button(props) {
     const Gender = genders[props.gender];
     return (
         <button type="button" onClick={props.onClick} className={props.className}>
-            <Gender/>
+            <Gender />
             <p>{props.gender}</p>
         </button>
     )
