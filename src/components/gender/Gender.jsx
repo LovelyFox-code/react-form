@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Icon from '../gender/assets/images/icon.svg';
-import Button from '../gender/Button'
+import Button from '../button/Button'
 
 
 

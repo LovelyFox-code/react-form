@@ -1,20 +1,20 @@
 .form {
   width: 35%;
   margin: auto;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   color: rgba(91, 91, 91, 1);
   padding-bottom: 5%;
 }
 .form-name {
   text-align: center;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 form {padding-top: 5%}
 .text p {
   text-align: center;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: normal;
   margin-top: 5%;
   margin-bottom: 0;
@@ -40,16 +40,16 @@ a:active {color: rgba(77, 178, 82, 1)}
   border: 2px solid rgba(193, 193, 193, 1);
   background-color: white;
   color: rgba(91, 91, 91, 1);
-  padding: 14px 28px;
+  padding: 0.875rem 1.75rem;
   padding-bottom: 0;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
-  border-radius: 16px;
+  border-radius: 1rem;
   width: 30%;
 }
 .btn-gender-active,
 .btn-gender:hover {
-  border: 2px solid rgba(60, 156, 65, 1);
+  border: 0.125rem solid rgba(60, 156, 65, 1);
   color: rgba(60, 156, 65, 1);
 }
 
@@ -97,7 +97,7 @@ button[type="submit"],
 button[type="button"]{outline: none}
 
 .text-danger {
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: normal;
 }
 .button:active {background-color: rgba(49, 134, 54, 1)}

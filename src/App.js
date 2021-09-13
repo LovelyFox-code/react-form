@@ -1,5 +1,4 @@
 import './App.css';
-import Gender from './components/gender/Gender';
 import Input from './components/input/Input';
 
 function App() {
